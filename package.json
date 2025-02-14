@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "start": "nodemon server.js",
-    "vercel-build": "npx vercel build"
+    "vercel-build": "vercel build"
   },
   "keywords": [],
   "author": "",
