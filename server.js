@@ -24,10 +24,12 @@ const connect = async () => {
   }
 };
 
-app.use(cors({ origin: "https://fiverr2.vercel.app", credentials: true }));
+app.use(cors({ origin: "https://fiverr2-9ebu.vercel.app", credentials: true }));
 app.use(express.json());
 app.use(cookieParser());
-
+app.get("/api/hello", (req, res) => {
+  res.json({ message: "Hello from Vercel Backend!" });
+});
 app.use("/api/auth", authRoute);
 app.use("/api/users", userRoute);
 app.use("/api/gigs", gigRoute);
